@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove any previous cursor styles first */
+
+/* Base cursor styles */
+.custom-cursor,
+.cursor-shadow {
+  position: fixed;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: #8685ef;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: width 0.3s, height 0.3s;
+}
+
+.cursor-shadow {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(134, 133, 239, 0.2);
+  border-radius: 50%;
+  z-index: 9998;
+  transition: width 0.3s, height 0.3s;
+}
+
+/* Hover states */
+.custom-cursor.hovering {
+  width: 30px;
+  height: 30px;
+}
+
+.cursor-shadow.hovering {
+  width: 60px;
+  height: 60px;
+}
+
+/* Only apply custom cursor on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Hide on touch devices */
+@media (hover: none) or (pointer: coarse) {
+  .custom-cursor,
+  .cursor-shadow {
+    display: none;
+  }
+}
+
+/* Hide default cursor */
+body {
+  cursor: none !important;
+}
+
+/* Show default cursor for interactive elements */
+a,
+button,
+input,
+textarea {
+  cursor: none !important;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-primary-light dark:bg-primary-dark text-text-light dark:text-text-dark;
+  }
+}
+
+@layer components {
+  .container-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    width: min(100% - 2rem, var(--container-max, 1280px));
+    margin-inline: auto;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-accent-light dark:bg-accent-dark text-white rounded-md 
+    hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-colors;
+  }
+}
+
+/* Hide scrollbar but keep scrolling functionality */
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+/* Remove previous scrollbar styles */
+/* Remove these styles:
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover,
+.dark ::-webkit-scrollbar-thumb,
+.dark ::-webkit-scrollbar-thumb:hover
+*/
+
+/* Add these styles */
+.skill-bar .progress-bar {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Add these performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize animations */
+.progress-bar,
+.custom-cursor,
+.cursor-shadow {
+  will-change: transform, width;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Reduce layout shifts */
+html {
+  scroll-behavior: smooth;
+  @apply overflow-x-hidden;
+}
+
+/* Optimize transitions */
+.transition-all {
+  will-change: transform, opacity;
+}
+
+.page-transition {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add these styles */
+.preview-container {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.laser-effect {
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.laser-line {
+  box-shadow: 0 0 8px #60a5fa;
+}
+
+/* Add responsive container styles */
+.container-wrapper {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  width: min(100% - 2rem, var(--container-max, 1280px));
+  margin-inline: auto;
+}
+
+/* Improve section padding */
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+/* Add responsive typography */
+@responsive {
+  .text-fluid {
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
+}
+
+/* Fix video preview on mobile */
+@media (max-width: 768px) {
+  .video-preview {
+    display: none;
+  }
+}
+
+/* Optimize scrolling performance */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.3s ease;
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
