@@ -8,33 +8,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
-    name: "John Doe",
-    role: "Tech Lead at Google",
+    name: "React Enthusiast",
+    role: "MERN Stack Developer",
     content:
-      "One of the most talented developers I've worked with. Their ability to solve complex problems while maintaining clean code is remarkable. Their expertise in AI and modern web technologies sets them apart.",
+      "Skilled in building scalable full-stack applications using React, Node.js, and MongoDB. Passionate about crafting clean, efficient code and providing a seamless user experience.",
     image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
-    name: "Sarah Smith",
-    role: "CTO at StartupX",
+    name: "AI & DSA Learner",
+    role: "AI and Data Science Enthusiast",
     content:
-      "Exceptional work on our AI integration project. Delivered high-quality code ahead of schedule with excellent documentation. Their deep understanding of both frontend and backend technologies made our project a success.",
+      "Focused on understanding the intricacies of training AI models and applying Data Structures and Algorithms (DSA) to solve complex problems. Always exploring new ways to optimize AI workflows and enhance problem-solving skills.",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
   },
   {
-    name: "Mike Johnson",
-    role: "Senior Developer at Meta",
+    name: "Docker & Hackathon Enthusiast",
+    role: "DevOps Learner & Hackathon Participant",
     content:
-      "A rare combination of technical excellence and creative problem-solving. Their contribution to our team was invaluable. They bring a unique perspective that combines AI knowledge with practical development skills.",
+      "Currently diving into Docker for containerization and automation, enhancing my ability to build scalable and efficient applications. Actively participating in hackathons to challenge myself, learn from others, and quickly prototype solutions in high-pressure environments.",
     image: "https://randomuser.me/api/portraits/men/2.jpg",
   },
-  {
-    name: "Emily Chen",
-    role: "AI Research Lead at Microsoft",
-    content:
-      "Outstanding ability to bridge the gap between AI theory and practical implementation. Their work on our machine learning infrastructure was exceptional, showing deep understanding of both ML concepts and software architecture.",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
-  },
+
   // {
   //   name: "David Kim",
   //   role: "Lead Architect at Netflix",

@@ -193,24 +193,68 @@ const AiSaas = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-primary-light/80 dark:from-primary-dark/80 to-transparent rounded-2xl" />
             </div>
           </div>
-
-          <h1
-            className="text-7xl font-display font-bold
-                           bg-gradient-to-r from-accent-blue via-accent-purple to-accent-blue 
-                           bg-clip-text text-transparent
-                           tracking-tight leading-[1.1]">
-            Unleash Your Networking Potential
-          </h1>
-
-          <p
-            className="text-2xl text-text-light dark:text-text-dark 
-                         font-medium leading-relaxed">
-            SkillSphere is more than just a platform—it's a dynamic ecosystem
-            designed to bring professionals together. By blending cutting-edge
-            technology with an intuitive interface, SkillSphere helps users
-            foster meaningful connections, share valuable insights, and unlock
-            new opportunities for personal and professional growth.
+          <section className="px-6 py-12">
+      <h1
+        className="text-7xl font-display font-bold 
+                   bg-gradient-to-r from-accent-blue via-accent-purple to-accent-blue 
+                   bg-clip-text text-transparent 
+                   tracking-tight leading-[1.1]"
+      >
+        Challenges Faced and Solutions
+      </h1>
+      <div className="mt-6 space-y-6">
+        <div>
+          <h2 className="text-3xl font-semibold text-accent-blue">
+            Authentication Security
+          </h2>
+          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+            <strong>Challenge:</strong> Ensuring user data protection and secure sessions.  
+            <br />
+            <strong>Solution:</strong> Implemented JWT for token-based authentication and bcrypt.js for encrypting passwords, creating a reliable and secure system.
           </p>
+        </div>
+        <div>
+          <h2 className="text-3xl font-semibold text-accent-purple">
+            Responsive Design
+          </h2>
+          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+            <strong>Challenge:</strong> Crafting a consistent and visually appealing design across devices.  
+            <br />
+            <strong>Solution:</strong> Utilized TailwindCSS and DaisyUI to design a fully responsive UI, ensuring optimal user experience on all screen sizes.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-3xl font-semibold text-accent-blue">
+            Media Uploads
+          </h2>
+          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+            <strong>Challenge:</strong> Handling and optimizing image uploads.  
+            <br />
+            <strong>Solution:</strong> Integrated Cloudinary for secure media storage and real-time optimizations, improving upload and delivery speed.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-3xl font-semibold text-accent-purple">
+            Real-Time Updates
+          </h2>
+          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+            <strong>Challenge:</strong> Synchronizing user interactions like likes and comments in real time.  
+            <br />
+            <strong>Solution:</strong> Used @tanstack/react-query to manage state efficiently and ensure responsive updates across the platform.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-3xl font-semibold text-accent-blue">
+            Scalable Database Design
+          </h2>
+          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+            <strong>Challenge:</strong> Structuring the database for a growing user base and interactions.  
+            <br />
+            <strong>Solution:</strong> Optimized MongoDB schema design and indexing for improved scalability and query performance.
+          </p>
+        </div>
+      </div>
+    </section>
 
           {/* Stats Grid */}
           {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16">
@@ -270,11 +314,6 @@ const AiSaas = () => {
         </div>
       </section>
 
-
-
-
-      
-
       {/* Screenshots Section */}
       <section className="screenshots-section container-wrapper py-32">
         <h2
@@ -309,8 +348,6 @@ const AiSaas = () => {
           </div>
         </div>
       </section>
-
-      
 
       {/* CTA Section */}
       <section className="container-wrapper py-32 text-center">
@@ -352,11 +389,6 @@ const AiSaas = () => {
             Return to Home
           </Link>
         </div>
-
-
-
-
-
       </section>
     </div>
   );

@@ -53,12 +53,12 @@ const features = [
   },
 ];
 
-const stats = [
-  { label: "Blog Posts", value: "20+" },
-  { label: "Active Users", value: "50+" },
-  { label: "Comments", value: "100+" },
-  { label: "Total Views", value: "500+" },
-];
+// const stats = [
+//   { label: "Blog Posts", value: "20+" },
+//   { label: "Active Users", value: "50+" },
+//   { label: "Comments", value: "100+" },
+//   { label: "Total Views", value: "500+" },
+// ];
 
 const MLPlatform = () => {
   const containerRef = useRef(null);
@@ -160,7 +160,7 @@ const MLPlatform = () => {
         </Link>
 
         {/* Unique Hero Layout */}
-        <div className="mt-16 grid grid-cols-12 gap-8">
+        <div className="mt-16  gap-8">
           {/* Left Column - Title and Description */}
           <div className="col-span-12 lg:col-span-5 space-y-8">
             <h1
@@ -174,12 +174,90 @@ const MLPlatform = () => {
             <p
               className="text-2xl text-text-light dark:text-text-dark 
                        font-medium leading-relaxed">
-              ByteCraft is a SaaS application that allows users to create and
-              read blog posts. Built using React with Vite for the front-end and
-              Appwrite for the back-end, the app includes user authentication
-              features such as sign-up and login to ensure secure access to
-              content.
+              ByteCraft is a dynamic SaaS application designed to empower users
+              to create, share, and engage with blog posts effortlessly. The
+              platform leverages modern technologies like React with Vite for a
+              highly responsive and fast front-end experience, while Appwrite
+              powers the back-end, ensuring robust functionality and seamless
+              performance. ByteCraft offers secure user authentication features,
+              including sign-up, login, and session management, to guarantee
+              personalized access and data security. With an intuitive rich text
+              editor, users can craft visually appealing and engaging blog posts
+              with ease.
             </p>
+
+            <h1
+              className="text-7xl font-display font-bold 
+                   bg-gradient-to-r from-accent-orange via-accent-purple to-accent-orange 
+                   bg-clip-text text-transparent 
+                   tracking-tight leading-[1.1]">
+              Challenges Faced and Solutions
+            </h1>
+            <div className="mt-6 space-y-6">
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-orange">
+                  Secure User Authentication
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Ensuring user data and sessions
+                  are secure.
+                  <br />
+                  <strong>Solution:</strong> Leveraged Appwrite's authentication
+                  services to implement secure token-based login and
+                  registration processes.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-purple">
+                  Rich Text Editor Integration
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Integrating a feature-rich text
+                  editor without performance issues.
+                  <br />
+                  <strong>Solution:</strong> Customized and optimized TinyMCE
+                  integration for smooth and responsive content editing.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-orange">
+                  State Management
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Managing global state effectively
+                  across components.
+                  <br />
+                  <strong>Solution:</strong> Implemented Redux Toolkit for
+                  efficient state management and to ensure consistent
+                  application behavior.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-purple">
+                  Optimized Performance
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Ensuring fast load times and
+                  responsive interactions.
+                  <br />
+                  <strong>Solution:</strong> Used Vite for faster builds and
+                  React optimizations for improved performance across the app.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-orange">
+                  Scalability for Growth
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Designing the app for a growing
+                  number of users and blog posts.
+                  <br />
+                  <strong>Solution:</strong> Optimized database queries and
+                  structured the backend with scalability in mind using
+                  Appwrite’s database services.
+                </p>
+              </div>
+            </div>
 
             <div className="flex flex-wrap gap-4">
               {["React", "Node.js", "Appwrite", "Tailwind"].map(
@@ -196,13 +274,13 @@ const MLPlatform = () => {
           </div>
 
           {/* Right Column - Stats Grid */}
-          <div className="col-span-12 lg:col-span-7">
+          {/* <div className="col-span-12 lg:col-span-7">
             <div className="relative">
-              {/* Decorative Elements */}
+              
               <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent-orange/20 rounded-full blur-3xl" />
               <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent-purple/20 rounded-full blur-3xl" />
 
-              {/* Stats Grid */}
+             
               <div
                 className="relative grid grid-cols-2 gap-6 p-8 bg-white/5 dark:bg-black/5 rounded-2xl backdrop-blur-sm
                            border border-white/10 dark:border-white/5">
@@ -224,12 +302,9 @@ const MLPlatform = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
-
-
-      
 
       {/* Features Section */}
       <section className="container-wrapper py-32 relative">

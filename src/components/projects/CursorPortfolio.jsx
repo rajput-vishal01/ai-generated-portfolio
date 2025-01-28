@@ -215,7 +215,7 @@ const CursorPortfolio = () => {
                          bg-gradient-to-r from-accent-purple via-accent-blue to-accent-purple 
                          bg-clip-text text-transparent
                          tracking-tight leading-[0.9]">
-              Cursor Portfolio
+              Portfolio
             </h1>
 
             <p
@@ -226,6 +226,88 @@ const CursorPortfolio = () => {
               excellence.
             </p>
           </div>
+
+          <section className="space-y-8 max-w-4xl px-6 py-12">
+            <h1
+              className="text-7xl md:text-9xl font-display font-bold
+                   bg-gradient-to-r from-accent-purple via-accent-blue to-accent-purple 
+                   bg-clip-text text-transparent
+                   tracking-tight leading-[0.9]">
+              Challenges and Solutions
+            </h1>
+
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-semibold text-accent-purple">
+                  Crafting a Vision-Aligned Design
+                </h2>
+                <p className="text-2xl md:text-3xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Translating abstract ideas into an
+                  exact design that aligns with my vision.
+                  <br />
+                  <strong>Solution:</strong> Leveraged AI tools like ChatGPT and
+                  Cursor AI to refine designs and generate functional code
+                  snippets, enabling rapid iterations and achieving precision.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-semibold text-accent-blue">
+                  Integrating Advanced Animations
+                </h2>
+                <p className="text-2xl md:text-3xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Creating smooth, visually
+                  appealing animations for a dynamic user experience.
+                  <br />
+                  <strong>Solution:</strong> Used GSAP for fine-tuned
+                  animations, ensuring smooth transitions and interactive
+                  elements for an engaging design.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-semibold text-accent-purple">
+                  Responsive and Accessible Design
+                </h2>
+                <p className="text-2xl md:text-3xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Ensuring the website looks great
+                  and functions well across all devices and themes.
+                  <br />
+                  <strong>Solution:</strong> Built with TailwindCSS for
+                  responsiveness, incorporating light and dark mode toggles and
+                  testing on various screen sizes to optimize usability.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-semibold text-accent-blue">
+                  Learning Three.js
+                </h2>
+                <p className="text-2xl md:text-3xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Utilizing Three.js for interactive
+                  3D models despite having no prior experience.
+                  <br />
+                  <strong>Solution:</strong> Studied Three.js documentation and
+                  tutorials to implement simple 3D elements, enhancing the
+                  visual appeal of the portfolio.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-semibold text-accent-purple">
+                  Effective Use of AI Models
+                </h2>
+                <p className="text-2xl md:text-3xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Communicating effectively with AI
+                  tools to get the desired output.
+                  <br />
+                  <strong>Solution:</strong> Developed skills in prompt
+                  engineering, enabling efficient interactions with AI tools
+                  like ChatGPT and Cursor AI to streamline development.
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
 
         {/* Main Image with enhanced effects */}
