@@ -11,23 +11,30 @@ const testimonials = [
     name: "React Enthusiast",
     role: "MERN Stack Developer",
     content:
-      "Skilled in building scalable full-stack applications using React, Node.js, and MongoDB. Passionate about crafting clean, efficient code and providing a seamless user experience.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+      "Driven by a passion for building dynamic, scalable web applications. I enjoy leveraging React, Node.js, and MongoDB to create seamless user experiences and efficient code.",
+    // image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
     name: "AI & DSA Learner",
     role: "AI and Data Science Enthusiast",
     content:
-      "Focused on understanding the intricacies of training AI models and applying Data Structures and Algorithms (DSA) to solve complex problems. Always exploring new ways to optimize AI workflows and enhance problem-solving skills.",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+      "Motivated by the challenge of solving complex problems using Data Structures and Algorithms (DSA) and exploring innovative approaches in AI model training. Constantly refining my skills to optimize workflows and enhance problem-solving.",
+    // image: "https://randomuser.me/api/portraits/women/1.jpg",
   },
   {
     name: "Docker & Hackathon Enthusiast",
     role: "DevOps Learner & Hackathon Participant",
     content:
-      "Currently diving into Docker for containerization and automation, enhancing my ability to build scalable and efficient applications. Actively participating in hackathons to challenge myself, learn from others, and quickly prototype solutions in high-pressure environments.",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
+      "Eager to expand my knowledge in Docker for containerization and automation. I thrive on participating in hackathons, pushing my limits, learning from others, and quickly prototyping solutions in fast-paced, high-pressure environments.",
+    // image: "https://randomuser.me/api/portraits/men/2.jpg",
   },
+  // {
+  //   name: "Web Performance Optimizer",
+  //   role: "Frontend & Backend Developer",
+  //   content:
+  //     "Passionate about optimizing web performance to create fast, responsive applications. I focus on improving load times, reducing bloat, and ensuring smooth user interactions to provide the best possible experience.",
+  //   // image: "https://randomuser.me/api/portraits/men/3.jpg",
+  // },
 
   // {
   //   name: "David Kim",
@@ -45,7 +52,7 @@ const testimonials = [
   // },
 ];
 
-const TestimonialCard = ({ name, role, content, image, index }) => {
+const TestimonialCard = ({ name, role, content, index }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -97,16 +104,13 @@ const TestimonialCard = ({ name, role, content, image, index }) => {
         {content}
       </p>
       <div className="flex items-center gap-6 mt-auto">
-        <img
+        {/* <img
           src={image}
           alt={name}
           className="w-16 h-16 rounded-full object-cover ring-4 ring-accent-light/20 dark:ring-accent-dark/20"
-        />
+        /> */}
         <div>
           <h4 className="text-2xl font-display tracking-wide mb-1">{name}</h4>
-          <p className="text-lg text-gray-600 dark:text-gray-400 font-mono">
-            {role}
-          </p>
         </div>
       </div>
     </div>
@@ -154,10 +158,10 @@ const Testimonials = () => {
       <div className="container-wrapper">
         <div className="section-title text-center mb-32">
           <h2 className="text-7xl md:text-8xl font-display mb-8">
-            Testimonials
+            What Drives Me
           </h2>
           <p className="text-2xl text-gray-600 dark:text-gray-400 font-mono">
-            What people say about my work
+            The passions that inspire my work and growth.
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const ParticleBg = ({ density = 30 }) => {
   const svgRef = useRef(null);
@@ -11,11 +11,14 @@ const ParticleBg = ({ density = 30 }) => {
 
     // Create particles with optimized animation
     for (let i = 0; i < density; i++) {
-      const particle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      const particle = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "circle"
+      );
       particle.setAttribute("r", Math.random() * 2 + 1);
       particle.setAttribute("fill", "url(#particle-gradient)");
       particle.setAttribute("data-seed", i);
-      particle.style.setProperty('--accent-color', '#60a5fa');
+      particle.style.setProperty("--accent-color", "#60a5fa");
       svg.appendChild(particle);
       particleElements.push(particle);
     }
@@ -28,7 +31,7 @@ const ParticleBg = ({ density = 30 }) => {
         const seed = parseInt(particle.getAttribute("data-seed"));
         const x = Math.sin(time + seed) * 20;
         const y = Math.cos(time * 0.8 + seed) * 20;
-        
+
         particle.style.transform = `translate(${x}px, ${y}px)`;
       });
 
@@ -41,7 +44,7 @@ const ParticleBg = ({ density = 30 }) => {
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
       }
-      particleElements.forEach(p => p.remove());
+      particleElements.forEach((p) => p.remove());
     };
   }, [density]);
 
@@ -50,8 +53,7 @@ const ParticleBg = ({ density = 30 }) => {
       ref={svgRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
       style={{ zIndex: 0 }}
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <defs>
         <radialGradient id="particle-gradient">
           <stop offset="0%" stopColor="var(--accent-color)" stopOpacity="0.3" />
@@ -62,4 +64,4 @@ const ParticleBg = ({ density = 30 }) => {
   );
 };
 
-export default ParticleBg; 
+export default ParticleBg;

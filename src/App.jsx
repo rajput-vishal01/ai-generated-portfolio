@@ -1,5 +1,11 @@
-import { Suspense, lazy, useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense, lazy, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useParams,
+  useNavigate,
+} from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import LoadingScreen from "./components/ui/LoadingScreen";
 import Navbar from "./components/layout/Navbar";
@@ -15,7 +21,7 @@ const Works = lazy(() => import("./components/sections/Works"));
 const Testimonials = lazy(() => import("./components/sections/Testimonials"));
 const Contact = lazy(() => import("./components/sections/Contact"));
 
-// Lazy load project components
+// Project component imports
 const CursorPortfolio = lazy(() =>
   import("./components/projects/CursorPortfolio")
 );
@@ -30,22 +36,71 @@ const SmartHomeDashboard = lazy(() =>
 const RealtimeCollab = lazy(() =>
   import("./components/projects/RealtimeCollab")
 );
-
-// Lazy load project detail component
-const ProjectDetail = lazy(() => import("./components/sections/ProjectDetail"));
-
-// Lazy load NotFound component
 const NotFound = lazy(() => import("./components/pages/NotFound"));
+
+// Project mapping configuration
+const PROJECT_CONFIG = {
+  "cursor-portfolio": {
+    component: CursorPortfolio,
+    displayName: "portfolio",
+  },
+  "ai-saas": {
+    component: AiSaas,
+    displayName: "SkillSphere",
+  },
+  "blockchain-explorer": {
+    component: BlockchainExplorer,
+    displayName: "ChainScan",
+  },
+  "ml-platform": {
+    component: MlPlatform,
+    displayName: "ByteCraft",
+  },
+  "smart-home": {
+    component: SmartHomeDashboard,
+    displayName: "HomeHub",
+  },
+  "realtime-collab": {
+    component: RealtimeCollab,
+    displayName: "CollabSpace",
+  },
+};
+
+// Project Handler Component
+const ProjectHandler = () => {
+  const { projectId } = useParams();
+  const navigate = useNavigate();
+  const project = Object.entries(PROJECT_CONFIG).find(
+    ([id, config]) => id === projectId || config.displayName === projectId
+  );
+
+  useEffect(() => {
+    if (project) {
+      const [actualId, config] = project;
+      // Only mask URL if using technical ID
+      if (actualId === projectId) {
+        navigate(`/work/${config.displayName}`, { replace: true });
+      }
+    }
+  }, [project, projectId, navigate]);
+
+  if (!project) return <NotFound />;
+
+  const ProjectComponent = project[1].component;
+  return <ProjectComponent />;
+};
 
 // Main content component
 const MainContent = () => (
   <main className="min-h-screen bg-primary-light dark:bg-primary-dark">
-    <Hero />
-    <About />
-    <Skills />
-    <Works />
-    <Testimonials />
-    <Contact />
+    <Suspense fallback={<LoadingScreen />}>
+      <Hero />
+      <About />
+      <Skills />
+      <Works />
+      <Testimonials />
+      <Contact />
+    </Suspense>
   </main>
 );
 
@@ -66,33 +121,16 @@ function App() {
                   </div>
                 }
               />
+
               <Route
-                path="/work/*"
+                path="/work/:projectId"
                 element={
                   <div className="page-transition">
-                    <Routes>
-                      <Route
-                        path="cursor-portfolio"
-                        element={<CursorPortfolio />}
-                      />
-                      <Route path="ai-saas" element={<AiSaas />} />
-                      <Route
-                        path="blockchain-explorer"
-                        element={<BlockchainExplorer />}
-                      />
-                      <Route path="ml-platform" element={<MlPlatform />} />
-                      <Route
-                        path="smart-home"
-                        element={<SmartHomeDashboard />}
-                      />
-                      <Route
-                        path="realtime-collab"
-                        element={<RealtimeCollab />}
-                      />
-                    </Routes>
+                    <ProjectHandler />
                   </div>
                 }
               />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

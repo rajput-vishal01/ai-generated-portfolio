@@ -221,9 +221,24 @@ const CursorPortfolio = () => {
             <p
               className="text-2xl md:text-3xl text-text-light dark:text-text-dark 
                        font-medium leading-relaxed">
-              A modern portfolio website with interactive cursor effects and
-              smooth animations, showcasing creative design and technical
-              excellence.
+              This project stands out as a unique experiment in AI-driven web
+              development. The goal was to build a modern portfolio website
+              entirely through AI models, with no human code intervention until
+              the project was complete. The AI handled all aspects of
+              functionality, from interactive cursor effects to smooth
+              animations even ThreeJS, creating a fully operational site. Once the project
+              was finished.
+            </p>
+
+            <br />
+
+            <p
+              className="text-2xl md:text-3xl text-text-light dark:text-text-dark 
+                       font-medium leading-relaxed">
+              I stepped in to personalize and fine-tune the content, ensuring it
+              aligned with my vision. This “No Code” approach highlights the
+              evolution of AI, testing its ability to manage both creative
+              design and technical execution independently.
             </p>
           </div>
 
@@ -281,15 +296,18 @@ const CursorPortfolio = () => {
 
               <div>
                 <h2 className="text-3xl md:text-4xl font-semibold text-accent-blue">
-                  Learning Three.js
+                  Enhancing AI-Generated Code Precision
                 </h2>
                 <p className="text-2xl md:text-3xl text-text-light dark:text-text-dark font-medium leading-relaxed">
-                  <strong>Challenge:</strong> Utilizing Three.js for interactive
-                  3D models despite having no prior experience.
+                  <strong>Challenge:</strong> Correcting inaccuracies in Cursor
+                  AI’s generated code, where elements were misaligned or
+                  functionality was not as intended.
                   <br />
-                  <strong>Solution:</strong> Studied Three.js documentation and
-                  tutorials to implement simple 3D elements, enhancing the
-                  visual appeal of the portfolio.
+                  <strong>Solution:</strong> Carefully reviewed and refined the
+                  AI-generated output by referencing element{" "}
+                  <strong>name tags</strong> and <strong>class names</strong>,
+                  providing more detailed configuration to guide the AI in
+                  producing the desired results.
                 </p>
               </div>
 
@@ -317,7 +335,7 @@ const CursorPortfolio = () => {
                      shadow-2xl shadow-accent-purple/20 group
                      transform-gpu transition-all duration-700 hover:scale-[1.02]">
           <img
-            src={images.main}
+            src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738162107/portfolio/sfxcroqcan3v1hd7k4im.png"
             alt="Cursor Portfolio"
             className="w-full h-[75vh] object-cover transform-gpu transition-transform duration-700
                      group-hover:scale-105"
@@ -366,105 +384,34 @@ const CursorPortfolio = () => {
         </div>
       </section>
 
-      {/* Gallery with masonry-like layout */}
-      <section className="gallery-section container-wrapper py-32">
-        <h2 className="gallery-title text-6xl font-display mb-24 text-center text-text-light dark:text-text-dark font-bold">
-          Project Gallery
-        </h2>
-
-        <div className="grid grid-cols-12 gap-8">
-          {/* Featured Items - Span multiple columns */}
-          <div className="gallery-item col-span-8 row-span-2">
-            <div className="group relative rounded-xl overflow-hidden aspect-[16/9]">
-              <img
-                src={images.gallery[0]}
-                alt="Main Feature"
-                className="w-full h-full object-cover transition-transform duration-700
-                         group-hover:scale-105"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent
-                           opacity-0 group-hover:opacity-100 transition-all duration-500
-                           flex flex-col justify-end p-8">
-                <h3 className="text-white text-3xl font-bold mb-3">
-                  Homepage Design
-                </h3>
-                <p className="text-white/90 text-lg max-w-xl">
-                  Interactive landing page with custom animations and particle
-                  effects
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Regular Items */}
-          <div className="gallery-item col-span-4">
-            <div className="group relative rounded-xl overflow-hidden aspect-square">
-              <img
-                src={images.gallery[1]}
-                alt="Feature 1"
-                className="w-full h-full object-cover transition-transform duration-700
-                         group-hover:scale-105"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent
-                           opacity-0 group-hover:opacity-100 transition-all duration-500
-                           flex flex-col justify-end p-6">
-                <h3 className="text-white text-2xl font-bold mb-2">
-                  Projects Section
-                </h3>
-                <p className="text-white/80">
-                  Portfolio showcase with hover effects
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Add more gallery items with varying spans */}
-          <div className="gallery-item col-span-6">
-            {/* Similar structure */}
-          </div>
-
-          <div className="gallery-item col-span-6">
-            {/* Similar structure */}
-          </div>
-
-          <div className="gallery-item col-span-4">
-            {/* Similar structure */}
-          </div>
-
-          <div className="gallery-item col-span-8">
-            {/* Similar structure */}
-          </div>
-        </div>
-      </section>
-
-      {/* Links with floating effect */}
       <section className="container-wrapper py-32 text-center">
         <div className="space-y-12">
-          <div className="flex flex-col md:flex-row justify-center gap-8">
-            <a
-              href="https://github.com/yourusername/cursor-portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-12 py-6 bg-accent-purple text-white font-semibold rounded-xl
-                       shadow-lg hover:shadow-2xl transition-all duration-500
-                       hover:scale-105 flex items-center justify-center gap-3
-                       border border-accent-purple/50 text-lg
-                       hover:bg-accent-purple/90 transform-gpu">
-              <FaGithub className="text-2xl" /> View Code
-            </a>
-            <a
-              href="https://cursor-portfolio.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-12 py-6 bg-accent-blue text-white font-semibold rounded-xl
-                       shadow-lg hover:shadow-2xl transition-all duration-500
-                       hover:scale-105 flex items-center justify-center gap-3
-                       border border-accent-blue/50 text-lg
-                       hover:bg-accent-blue/90 transform-gpu">
-              <FaExternalLinkAlt className="text-2xl" /> Live Demo
-            </a>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-semibold text-accent-purple">
+              Personalized & Interactive Portfolio
+            </h2>
+            <p className="text-2xl md:text-3xl text-text-light dark:text-text-dark font-medium leading-relaxed flex flex-col gap-2">
+              <span>
+                This portfolio is a <strong>unique representation</strong> of my{" "}
+                <strong>skills</strong>,<strong>creativity</strong>, and{" "}
+                <strong>expertise</strong> in web development. The project was
+                built using a combination of{" "}
+                <strong>modern technologies</strong> and{" "}
+                <strong>AI-assisted workflows</strong>, resulting in a{" "}
+                <strong>highly customized</strong> and{" "}
+                <strong>optimized solution</strong>.
+              </span>
+              <span>
+                Due to the <strong>extensive AI-generated code</strong> and its{" "}
+                <strong>complexity</strong>, I have chosen{" "}
+                <strong>not to make the source code publicly available</strong>{" "}
+                to maintain its originality and avoid{" "}
+                <strong>unauthorized replication</strong>. However, you are
+                already experiencing the
+                <strong>live version</strong> of my portfolio as you browse this
+                site.
+              </span>
+            </p>
           </div>
 
           <Link

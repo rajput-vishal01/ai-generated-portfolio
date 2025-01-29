@@ -174,16 +174,12 @@ const MLPlatform = () => {
             <p
               className="text-2xl text-text-light dark:text-text-dark 
                        font-medium leading-relaxed">
-              ByteCraft is a dynamic SaaS application designed to empower users
-              to create, share, and engage with blog posts effortlessly. The
-              platform leverages modern technologies like React with Vite for a
-              highly responsive and fast front-end experience, while Appwrite
-              powers the back-end, ensuring robust functionality and seamless
-              performance. ByteCraft offers secure user authentication features,
-              including sign-up, login, and session management, to guarantee
-              personalized access and data security. With an intuitive rich text
-              editor, users can craft visually appealing and engaging blog posts
-              with ease.
+              ByteCraft is a SaaS platform that enables seamless blog creation,
+              sharing, and engagement. Built with React and Vite for a fast
+              frontend, and Appwrite for backend functionality, it ensures
+              secure authentication (sign-up/login) and session management. The
+              intuitive rich text editor empowers users to craft visually
+              appealing posts effortlessly.
             </p>
 
             <h1
@@ -363,7 +359,7 @@ const MLPlatform = () => {
             <div className="absolute -inset-4 bg-accent-orange/20 blur-2xl rounded-3xl opacity-50" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src={images.gallery[0]}
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738084807/ByteCraft/fcitqiqcmbj5hssd14xt.png"
                 alt="Main Dashboard"
                 className="w-full transform hover:scale-105 transition-transform duration-700"
               />
@@ -372,30 +368,60 @@ const MLPlatform = () => {
           </div>
 
           {/* Feature Previews */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {images.gallery.slice(1, 3).map((img, index) => (
-              <div key={index} className="dashboard-preview group relative">
-                <div
-                  className="absolute -inset-4 bg-accent-purple/20 blur-2xl rounded-3xl opacity-0 
-                             group-hover:opacity-50 transition-opacity duration-700"
-                />
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src={img}
-                    alt={`Dashboard ${index + 1}`}
-                    className="w-full transform hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {/* Image Pair Section */}
+            <div className="flex flex-col md:flex-row gap-4 rounded-xl">
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738084807/ByteCraft/ccvsc7juqogkcokbkhtl.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738084807/ByteCraft/uvxuwtfnxqn0ifevux2t.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+
+          <br />
+          <div>
+            <h2 className="text-3xl font-semibold text-accent-orange">
+              TinyMCE integration :
+            </h2>
+          </div>
+
+          <br />
+
+          {/* Wide Image Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738084807/ByteCraft/lijppiulwzxc3tqjjhmr.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738084808/ByteCraft/cmqdvn18azwupv0n7r6z.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+
       <section className="container-wrapper py-32 text-center">
         <div className="space-y-12">
+          <p
+            className="text-2xl text-text-light dark:text-text-dark 
+                         font-medium leading-relaxed">
+            Note: Currently, when logged into the app on Vercel, you may need to
+            reload the page (or link) before being able to post. This issue
+            doesn't occur on localhost.
+          </p>
           <div className="flex flex-col md:flex-row justify-center gap-8">
             <a
               href="https://github.com/rajput-vishal01/byteCraft"

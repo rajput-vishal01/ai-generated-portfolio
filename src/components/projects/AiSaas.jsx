@@ -8,17 +8,16 @@ import { getProjectImages } from "../../utils/placeholders";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Theme configuration
 const theme = {
-  primary: "accent-blue",
-  secondary: "accent-purple",
-  gradient: "from-accent-blue via-accent-purple to-accent-blue",
-  hover: "accent-blue/80",
-  background: "white/10",
-  border: "white/20",
-  text: "text-light dark:text-dark",
+  primary: "skillsphere-accent", // Set primary to your custom accent color (Subtle Cool Gray)
+  secondary: "skillsphere-primary", // Set secondary to your custom primary color (Soft Slate)
+  gradient:
+    "from-skillsphere-accent via-skillsphere-primary to-skillsphere-accent", // Gradient using your custom colors
+  hover: "skillsphere-accent/80", // Hover effect with your custom accent color and opacity
+  background: "skillsphere-base-100", // Set background to your Deep Onyx color
+  border: "skillsphere-neutral-200", // Set borders to your Slightly lighter Onyx color
+  text: "skillsphere-text-primary dark:text-skillsphere-text-secondary", // Set text color to your Cool White for light mode and Soft Gray for dark mode
 };
-
 // Content configuration
 const features = [
   {
@@ -158,7 +157,7 @@ const AiSaas = () => {
                            bg-gradient-to-r from-accent-blue via-accent-purple to-accent-blue 
                            bg-clip-text text-transparent
                            tracking-tight leading-[1.1]">
-                SkillSphere - A Networking Platform
+                Skill Sphere - A Networking Platform
               </h1>
 
               <p
@@ -186,75 +185,88 @@ const AiSaas = () => {
 
             <div className="relative">
               <img
-                src="../../../assets/SkillSphere/logo.png"
-                alt="AI SaaS Platform"
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738082902/SkillSphere/kewenxhqdcdf3qvpmewd.png"
+                alt="SkillSphere"
                 className="rounded-2xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-light/80 dark:from-primary-dark/80 to-transparent rounded-2xl" />
             </div>
           </div>
           <section className="px-6 py-12">
-      <h1
-        className="text-7xl font-display font-bold 
+            <h1
+              className="text-7xl font-display font-bold 
                    bg-gradient-to-r from-accent-blue via-accent-purple to-accent-blue 
                    bg-clip-text text-transparent 
-                   tracking-tight leading-[1.1]"
-      >
-        Challenges Faced and Solutions
-      </h1>
-      <div className="mt-6 space-y-6">
-        <div>
-          <h2 className="text-3xl font-semibold text-accent-blue">
-            Authentication Security
-          </h2>
-          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
-            <strong>Challenge:</strong> Ensuring user data protection and secure sessions.  
-            <br />
-            <strong>Solution:</strong> Implemented JWT for token-based authentication and bcrypt.js for encrypting passwords, creating a reliable and secure system.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-3xl font-semibold text-accent-purple">
-            Responsive Design
-          </h2>
-          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
-            <strong>Challenge:</strong> Crafting a consistent and visually appealing design across devices.  
-            <br />
-            <strong>Solution:</strong> Utilized TailwindCSS and DaisyUI to design a fully responsive UI, ensuring optimal user experience on all screen sizes.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-3xl font-semibold text-accent-blue">
-            Media Uploads
-          </h2>
-          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
-            <strong>Challenge:</strong> Handling and optimizing image uploads.  
-            <br />
-            <strong>Solution:</strong> Integrated Cloudinary for secure media storage and real-time optimizations, improving upload and delivery speed.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-3xl font-semibold text-accent-purple">
-            Real-Time Updates
-          </h2>
-          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
-            <strong>Challenge:</strong> Synchronizing user interactions like likes and comments in real time.  
-            <br />
-            <strong>Solution:</strong> Used @tanstack/react-query to manage state efficiently and ensure responsive updates across the platform.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-3xl font-semibold text-accent-blue">
-            Scalable Database Design
-          </h2>
-          <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
-            <strong>Challenge:</strong> Structuring the database for a growing user base and interactions.  
-            <br />
-            <strong>Solution:</strong> Optimized MongoDB schema design and indexing for improved scalability and query performance.
-          </p>
-        </div>
-      </div>
-    </section>
+                   tracking-tight leading-[1.1]">
+              Challenges Faced and Solutions
+            </h1>
+            <div className="mt-6 space-y-6">
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-blue">
+                  Authentication Security
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Ensuring user data protection and
+                  secure sessions.
+                  <br />
+                  <strong>Solution:</strong> Implemented JWT for token-based
+                  authentication and bcrypt.js for encrypting passwords,
+                  creating a reliable and secure system.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-purple">
+                  Responsive Design
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Crafting a consistent and visually
+                  appealing design across devices.
+                  <br />
+                  <strong>Solution:</strong> Utilized TailwindCSS and DaisyUI to
+                  design a fully responsive UI, ensuring optimal user experience
+                  on all screen sizes.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-blue">
+                  Media Uploads
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Handling and optimizing image
+                  uploads.
+                  <br />
+                  <strong>Solution:</strong> Integrated Cloudinary for secure
+                  media storage and real-time optimizations, improving upload
+                  and delivery speed.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-purple">
+                  Real-Time Updates
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Synchronizing user interactions
+                  like likes and comments in real time.
+                  <br />
+                  <strong>Solution:</strong> Used @tanstack/react-query to
+                  manage state efficiently and ensure responsive updates across
+                  the platform.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-semibold text-accent-blue">
+                  Scalable Database Design
+                </h2>
+                <p className="text-2xl text-text-light dark:text-text-dark font-medium leading-relaxed">
+                  <strong>Challenge:</strong> Structuring the database for a
+                  growing user base and interactions.
+                  <br />
+                  <strong>Solution:</strong> Optimized MongoDB schema design and
+                  indexing for improved scalability and query performance.
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Stats Grid */}
           {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16">
@@ -325,26 +337,65 @@ const AiSaas = () => {
         <div className="space-y-16">
           <div className="screenshot relative rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src={images.gallery[0]}
+              src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738082903/SkillSphere/rycaxvbpl54i6f6ruoc1.png"
               alt="Dashboard"
               className="w-full transform hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {images.gallery.slice(1, 3).map((img, index) => (
-              <div
-                key={index}
-                className="screenshot relative rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src={img}
-                  alt={`Interface ${index + 1}`}
-                  className="w-full transform hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              </div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Gallery Section */}
+            {/* {images.gallery.slice(1, 3).map((img, index) => (
+    <div
+      key={index}
+      className="screenshot relative rounded-2xl overflow-hidden shadow-xl">
+      <img
+        src={img}
+        alt={`Interface ${index + 1}`}
+        className="w-full h-auto transform hover:scale-105 transition-transform duration-700 object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+    </div>
+  ))} */}
+
+            {/* Image Pair Section */}
+            <div className="flex flex-col md:flex-row gap-4 rounded-xl">
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738083210/SkillSphere/zxpmcsun98qxlbzl4ak6.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738083209/SkillSphere/hapkuuslildsbmbzh3o9.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+            </div>
+            <br />
+            <div >
+              <h2 className="text-3xl font-semibold text-accent-blue">
+                Receiving Emails from Mailtrap :
+              </h2>
+             
+             
+            </div>
+
+            <br />
+
+            {/* Wide Image Section */}
+            <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738158929/SkillSphere/qkclltfcvkujkjugvswp.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+              <img
+                src="https://res.cloudinary.com/dbifuyxna/image/upload/v1738158929/SkillSphere/ttazvhxedgbxfncv8kqi.png"
+                alt=""
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -376,6 +427,14 @@ const AiSaas = () => {
               <FaExternalLinkAlt className="text-2xl" /> Live Demo
             </a>
           </div>
+
+          <p
+            className="text-2xl text-text-light dark:text-text-dark 
+                         font-medium leading-relaxed">
+            Note: The application is deployed on Render. Free instances may spin
+            down with inactivity, causing delays of up to 50 seconds or more for
+            requests.
+          </p>
 
           <Link
             to="/"

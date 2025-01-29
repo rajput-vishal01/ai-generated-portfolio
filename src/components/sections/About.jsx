@@ -126,10 +126,10 @@ const About = () => {
             </h2>
             <p className="text-3xl md:text-4xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
               A passionate developer focused on building scalable applications
-              that solve real-world problems. Skilled in the MERN stack and
-              Docker, I aim to deliver impactful solutions while continuously
-              honing my web development skills and exploring innovative
-              technologies.
+              that solve real-world problems. Skilled in the MERN stack applying
+              Data Structures and Algorithms (DSA) to solve complex problems, I
+              aim to deliver impactful solutions while continuously honing my
+              web development skills and exploring innovative technologies.
             </p>
           </div>
 

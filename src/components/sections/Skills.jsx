@@ -44,10 +44,10 @@ const Skills = () => {
 
   const skills = [
     { name: "Frontend Development", percentage: 85 },
-    { name: "Backend Development", percentage: 74 },
-    { name: "UI/UX Design", percentage: 80 },
-    { name: "AI/ML Development", percentage: 75 },
-    { name: "DevOps & Cloud", percentage: 70 },
+    { name: "Backend Development (Including DBMS)", percentage: 80 },
+    { name: "Data Structures & Algorithms", percentage: 85 }, // Added DSA as it's a key strength
+    { name: "DevOps & Cloud (Learning Docker & Kubernetes)", percentage: 65 },
+    { name: "Cloud Computing & Deployment", percentage: 70 },
   ];
 
   useEffect(() => {

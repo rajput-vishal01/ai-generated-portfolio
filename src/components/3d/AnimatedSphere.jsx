@@ -29,11 +29,12 @@ const AnimatedSphere = () => {
     containerRef.current.appendChild(renderer.domElement);
 
     // Create particles
-    const particlesCount = 5000;
+    const particlesCount = 10000;
     const positions = new Float32Array(particlesCount * 3);
     const randomMotions = new Float32Array(particlesCount * 3);
     const particleTypes = new Float32Array(particlesCount);
-    const originalPositions = new Float32Array(particlesCount * 3); // Store original positions
+    const originalPositions = new Float32Array(particlesCount * 3);
+    // Store original positions
 
     // Initialize particles
     for (let i = 0; i < particlesCount; i++) {
@@ -65,8 +66,8 @@ const AnimatedSphere = () => {
 
     // Create brighter material
     const particlesMaterial = new THREE.PointsMaterial({
-      size: 0.009,
-      color: "#8685ef",
+      size: 0.01,
+      color: "#1e90ff", // Vivid electric blue
       transparent: true,
       opacity: 1,
       blending: THREE.AdditiveBlending,

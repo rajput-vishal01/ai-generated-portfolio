@@ -31,10 +31,11 @@ const Navbar = () => {
 
   const handleDownloadResume = () => {
     // Replace '/resume.pdf' with the actual path to your resume file
-    const resumeUrl = "/resume.pdf";
+    const resumeUrl =
+      "https://drive.google.com/file/d/1DVqufrhzD0KGkmzqb_K_EEqYk5RwDOKC/view?usp=drive_link";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "YourName_Resume.pdf"; // Replace with your name
+    link.download = "askvishal.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

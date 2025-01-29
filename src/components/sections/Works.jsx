@@ -110,7 +110,7 @@ const Works = () => {
       technologies: ["React", "GSAP", "Tailwind"],
       github: "https://github.com/rajput-vishal01/cursor-portfolio",
       
-      video: "/videos/1.mp4",
+      video: "/videos/Cursor.mp4",
     },
     
     // {
