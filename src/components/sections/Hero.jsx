@@ -171,7 +171,7 @@ const Hero = () => {
 
             {/* Tech Stack Pills */}
             <div className="hero-element flex flex-wrap justify-center gap-4 pt-8">
-              {["TypeScript", "ReactJs", "NextJs", "MongoDB", "Express"].map(
+              {["JavaScript", "ReactJs", "NodeJs", "MongoDB", "Express"].map(
                 (tech) => (
                   <span
                     key={tech}

@@ -32,7 +32,7 @@ const Navbar = () => {
   const handleDownloadResume = () => {
     // Replace '/resume.pdf' with the actual path to your resume file
     const resumeUrl =
-      "https://drive.google.com/file/d/1DVqufrhzD0KGkmzqb_K_EEqYk5RwDOKC/view?usp=drive_link";
+      "https://drive.google.com/file/d/1Ee_1n_Q7uR8i0zmCL8dAh_601tlZ8lrw/view?usp=sharing";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "askvishal.pdf";

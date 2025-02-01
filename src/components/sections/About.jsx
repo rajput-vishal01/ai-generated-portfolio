@@ -18,6 +18,7 @@ import {
   SiPrisma,
 } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 import ParticleBg from "../ui/ParticleBg";
 
@@ -61,11 +62,12 @@ const About = () => {
   const skills = {
     development: [
       { icon: FaReact, name: "React" },
-      { icon: SiNextdotjs, name: "Next.js" },
-      { icon: SiTypescript, name: "TypeScript" },
+      // { icon: SiNextdotjs, name: "Next.js" },
+      // { icon: SiTypescript, name: "TypeScript" },
       { icon: FaNodeJs, name: "Node.js" },
       { icon: FaDatabase, name: "SQL" },
       { icon: DiMongodb, name: "MongoDB" },
+      { icon: BiLogoPostgresql, name: "Postgres" },
     ],
     cloud: [
       { icon: FaDocker, name: "Docker" },
@@ -134,9 +136,7 @@ const About = () => {
           </div>
 
           {/* Skills Grid - Grape-like structure */}
-          <div className="skills-container space-y-8">
-            {" "}
-            {/* Reduced spacing between groups */}
+          <div className="skills-container space-y-6 space-x-4 p-12">
             {/* Development - Wider spread */}
             <div className="skill-section transform hover:scale-105 transition-transform duration-500">
               <div className="flex flex-wrap justify-center gap-6">

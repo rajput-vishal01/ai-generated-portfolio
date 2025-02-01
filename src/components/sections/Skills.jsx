@@ -44,7 +44,7 @@ const Skills = () => {
 
   const skills = [
     { name: "Frontend Development", percentage: 85 },
-    { name: "Backend Development (Including DBMS)", percentage: 80 },
+    { name: "Backend Development", percentage: 80 },
     { name: "Data Structures & Algorithms", percentage: 85 }, // Added DSA as it's a key strength
     { name: "DevOps & Cloud (Learning Docker & Kubernetes)", percentage: 65 },
     { name: "Cloud Computing & Deployment", percentage: 70 },

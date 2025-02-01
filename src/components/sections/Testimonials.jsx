@@ -21,13 +21,13 @@ const testimonials = [
       "Motivated by the challenge of solving complex problems using Data Structures and Algorithms (DSA) and exploring innovative approaches in AI model training. Constantly refining my skills to optimize workflows and enhance problem-solving.",
     // image: "https://randomuser.me/api/portraits/women/1.jpg",
   },
-  {
-    name: "Docker & Hackathon Enthusiast",
-    role: "DevOps Learner & Hackathon Participant",
-    content:
-      "Eager to expand my knowledge in Docker for containerization and automation. I thrive on participating in hackathons, pushing my limits, learning from others, and quickly prototyping solutions in fast-paced, high-pressure environments.",
-    // image: "https://randomuser.me/api/portraits/men/2.jpg",
-  },
+  // {
+  //   name: "Docker & Hackathon Enthusiast",
+  //   role: "DevOps Learner & Hackathon Participant",
+  //   content:
+  //     "Eager to expand my knowledge in Docker for containerization and automation. I thrive on participating in hackathons, pushing my limits, learning from others, and quickly prototyping solutions in fast-paced, high-pressure environments.",
+  //   // image: "https://randomuser.me/api/portraits/men/2.jpg",
+  // },
   // {
   //   name: "Web Performance Optimizer",
   //   role: "Frontend & Backend Developer",
